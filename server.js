@@ -13,7 +13,7 @@ var morgan = require('morgan');
 var cors = require('cors');
 
 //Assign a port for the server
-var port = 3001;
+var port = process.env.PORT || 3001;
 
 //express.use() specifies middleware for express to use
 //Morgan.tiny: Minimal output for the request (doesn't display everything)
