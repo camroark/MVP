@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='QuickFood'>
+<head>
+   <title>QuickFood</title>
+   <meta charset="utf-8">
+   <script src='../node_modules/angular/angular.min.js'></script>
+   <script src='./app.js'></script>
+   <script src="../node_modules/oauth-signature/dist/oauth-signature.min.js"></script>
+   <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+<body>
+   <div ng-controller="GoogleCtrl">
+      <ul>
+         <li ng-repeat="n in burgerPlaces track by $index">
+            <div>
+               {{n.name}},
+               {{n.rating}}
+            </div>
+         </li>
+      </ul>
+   </div>
+</body>
+</html>

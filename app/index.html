@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app='QuickFood'>
+<head>
+   <title>QuickFood</title>
+   <meta charset="utf-8">
+   <script src='../node_modules/angular/angular.min.js'></script>
+   <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+   <script src="../node_modules/oauth-signature/dist/oauth-signature.min.js"></script>
+   <script src='./app.js'></script>
+   <script src="./factory.js"></script>
+   <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+<body>
+   <h1>QuickFood</h1>
+   <div class='navBar'>
+      <ul>
+         <li><a ng-href='#/home' class='navDiv'>Home</a></li>
+      </ul>
+   </div>
+<div ui-view>
+   <a ng-href='#/burgers'>
+      <div ng-controller="ctrl">
+      <span>{{burger.title}}</span>
+         <img ng-src="{{burger.img}}" />
+      </div>
+   </a>
+
+   <a ng-href='#/chinese'>
+      <div ng-controller="ctrl">
+      <span>{{chinese.title}}</span>
+         <img ng-src="{{chinese.img}}" />
+      </div>
+   </a>
+
+   <a ng-href='#/mediteranean'>
+      <div ng-controller="ctrl">
+      <span>{{mediteranean.title}}</span>
+         <img ng-src="{{mediteranean.img}}" />
+      </div>
+   </a>
+
+   <a ng-href='#/pizza'>
+      <div ng-controller="ctrl">
+      <span>{{pizza.title}}</span>
+         <img ng-src="{{pizza.img}}" />
+      </div>
+   </a>
+
+   <a ng-href='#/ramen'>
+      <div ng-controller="ctrl">
+      <span>{{ramen.title}}</span>
+         <img ng-src="{{ramen.img}}" />
+      </div>
+   </a>
+
+   <a ng-href='#/sandwhiches'>
+      <div ng-controller="ctrl">
+      <span>{{sandwhiches.title}}</span>
+         <img ng-src="{{sandwhiches.img}}" />
+      </div>
+   </a>
+</div>
+</body>
+</html>
